@@ -1,11 +1,11 @@
 GUI_kode bib = new GUI_kode();
 
-GUI_kode.Button buttonTerning100 = bib.new Button(10,150,150,50,"Slå med 100s terning!",this);
+GUI_kode.Button buttonTerning100 = bib.new Button(195, 150, 100, 33, "Slå med 100s terning!", this);
 
-GUI_kode.Button buttonTerning6 = bib.new Button(10, 10, 150, 50, "Slå med 6s terning!",this);
-GUI_kode.Button buttonTerning10 = bib.new Button(340, 10, 150, 50, "Slå med 10s terning!",this);
-GUI_kode.Button buttonTerning12 = bib.new Button(10, 80, 150, 50, "Slå med 12s terning!",this);
-GUI_kode.Button buttonTerning20 = bib.new Button(340, 80, 150, 50, "Slå med 20s terning!",this);
+GUI_kode.Button buttonTerning6 = bib.new Button(10, 10, 150, 50, "Slå med 6s terning!", this);
+GUI_kode.Button buttonTerning10 = bib.new Button(340, 10, 150, 50, "Slå med 10s terning!", this);
+GUI_kode.Button buttonTerning12 = bib.new Button(10, 80, 150, 50, "Slå med 12s terning!", this);
+GUI_kode.Button buttonTerning20 = bib.new Button(340, 80, 150, 50, "Slå med 20s terning!", this);
 
 int sum;
 int terningeKast;
@@ -28,7 +28,7 @@ void setup() {
     }
   }
   );
-  
+
   buttonTerning12.addAction(new GUI_kode.Action() {   
     public void execute() {
       terningeKast = int(random(1, 13));
@@ -36,7 +36,7 @@ void setup() {
     }
   }
   );
-  
+
   buttonTerning20.addAction(new GUI_kode.Action() {   
     public void execute() {
       terningeKast = int(random(1, 21));
@@ -44,7 +44,7 @@ void setup() {
     }
   }
   );
-  
+
   buttonTerning100.addAction(new GUI_kode.Action() {   
     public void execute() {
       terningeKast = int(random(1, 101));
