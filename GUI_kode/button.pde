@@ -1,15 +1,17 @@
 class Button{
+  PApplet p;
  int posX, posY;
  int l, h;
  String text;
  Action a;
  
-  Button(int a, int b, int c, int d, String e){
+  Button(int a, int b, int c, int d, String e,PApplet p){
     posX = a;
     posY = b;
     l = c;
     h = d;
     text = e;
+    this.p = p;
   }
   
   void addAction(Action a){
@@ -17,14 +19,14 @@ class Button{
   }
   
   void display(){
-    fill(255,0,0);
-    rect(posX,posY,l,h);
-    fill(255);
-    text(text,posX,posY);
+    p.fill(255,0,0);
+    p.rect(posX,posY,l,h);
+    p.fill(255);
+    p.text(text,posX,posY);
   }
   
   void click(){
-    if((mouseX>posX)&&(mouseY>posY)&&(mouseX<posX+l)&&(mouseY<posY+h)){
+    if((p.mouseX>posX)&&(p.mouseY>posY)&&(p.mouseX<posX+l)&&(p.mouseY<posY+h)){
       a.execute();
     }
   }
